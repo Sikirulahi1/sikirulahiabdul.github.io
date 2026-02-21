@@ -18,7 +18,7 @@ export default function Blogs() {
             subtitle="Technical deep-dives, tutorials, and insights on AI/ML engineering."
           />
 
-          <div className="text-center py-20">
+          <div className="text-center py-20 mt-16">
             <p className="text-text-secondary text-lg mb-4">
               Blog posts coming soon!
             </p>
@@ -40,7 +40,7 @@ export default function Blogs() {
           subtitle="Technical deep-dives, tutorials, and insights on AI/ML engineering."
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
           {blogPosts.map((post, index) => (
             <FadeUp key={post.id} delay={index * 0.1}>
               <a

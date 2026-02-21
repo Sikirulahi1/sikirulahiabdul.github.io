@@ -27,7 +27,7 @@ export default function Projects() {
         />
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <div className="flex flex-wrap justify-center gap-4 mb-16 mt-16">
           {categories.map((category) => (
             <button
               key={category}

@@ -22,7 +22,7 @@ export default function About() {
           title="About Me"
         />
 
-        <div className="grid md:grid-cols-5 gap-16 lg:gap-20">
+        <div className="grid md:grid-cols-5 gap-16 lg:gap-20 mt-16">
           {/* Left Column - Narrative */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}

@@ -22,8 +22,7 @@
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
-  --font-cormorant: var(--font-cormorant-garamond);
-  --font-jetbrains: var(--font-jetbrains-mono);
+  --font-fira: var(--font-fira-code);
 
   --animate-fadeUp: fadeUp 0.6s ease-out;
   --animate-slideInRight: slideInRight 0.6s ease-out;
@@ -46,7 +45,7 @@ html {
 body {
   background: var(--bg);
   color: var(--text-primary);
-  font-family: var(--font-jetbrains), monospace;
+  font-family: var(--font-fira), monospace;
   overflow-x: hidden;
   position: relative;
 }

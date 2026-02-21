@@ -24,7 +24,7 @@ export default function Experience() {
           title="Experience"
         />
 
-        <div className="relative">
+        <div className="relative mt-16">
           {/* Timeline Line */}
           <div className="absolute left-0 md:left-8 top-0 bottom-0 w-0.5 bg-border-subtle">
             <motion.div
@@ -34,7 +34,7 @@ export default function Experience() {
           </div>
 
           {/* Experience Cards */}
-          <div className="space-y-16 ml-8 md:ml-20">
+          <div className="space-y-20 ml-8 md:ml-20">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}

@@ -15,7 +15,7 @@ export default function Community() {
           subtitle="Contributing to the growth of AI/ML communities and collaborative learning."
         />
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mt-16">
           {community.map((item, index) => (
             <FadeUp key={index} delay={index * 0.1}>
               <div className="bg-card border border-border-subtle rounded-lg p-8 hover:border-accent hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] transition-all h-full flex flex-col">

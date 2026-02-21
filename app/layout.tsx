@@ -1,21 +1,13 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, JetBrains_Mono } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import CustomCursor from "@/components/ui/CustomCursor";
 
-const cormorantGaramond = Cormorant_Garamond({
+const firaCode = Fira_Code({
   weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
   subsets: ["latin"],
-  variable: "--font-cormorant-garamond",
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  weight: ["400", "500"],
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
+  variable: "--font-fira-code",
   display: "swap",
 });
 
@@ -64,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${cormorantGaramond.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${firaCode.variable} antialiased`}
       >
         <CustomCursor />
         <Navbar />

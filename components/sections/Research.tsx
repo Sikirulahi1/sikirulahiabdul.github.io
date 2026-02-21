@@ -18,7 +18,7 @@ export default function Research() {
           centered
         />
 
-        <div className="space-y-12">
+        <div className="space-y-16 mt-16">
           {publications.map((pub, index) => (
             <FadeUp key={index} delay={index * 0.2}>
               <div className="bg-card border border-border-subtle rounded-lg p-8 hover:border-accent transition-all">

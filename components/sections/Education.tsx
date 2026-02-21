@@ -15,7 +15,7 @@ export default function Education() {
           title="Education & Awards"
         />
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 mt-16">
           {/* Education */}
           <FadeUp>
             <div className="bg-card border border-border-subtle rounded-lg p-8 h-full">
