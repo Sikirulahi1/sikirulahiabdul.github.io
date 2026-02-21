@@ -15,7 +15,7 @@ export default function Education() {
           title="Education & Awards"
         />
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-12">
           {/* Education */}
           <FadeUp>
             <div className="bg-card border border-border-subtle rounded-lg p-8 h-full">
@@ -59,7 +59,7 @@ export default function Education() {
           </FadeUp>
 
           {/* Awards */}
-          <div className="space-y-4">
+          <div className="space-y-6">
             {awards.map((award, index) => (
               <FadeUp key={index} delay={index * 0.1}>
                 <div className="bg-card border-l-2 border-accent rounded-lg p-6 hover:border-accent hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] transition-all">

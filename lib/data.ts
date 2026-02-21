@@ -17,12 +17,24 @@ export interface Project {
   description: string;
   keyMetric: string;
   techStack: string[];
+  image?: string; // Path to project thumbnail image
   links: {
     github?: string;
     live?: string;
     doi?: string;
     note?: string;
   };
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  description: string;
+  date: string;
+  readTime: string;
+  tags: string[];
+  image?: string;
+  link: string;
 }
 
 export interface Publication {
@@ -490,4 +502,19 @@ export const researchInterests = [
   "NLP & LLMs",
   "Multi-Agent Systems",
   "AI in Robotics",
+];
+
+export const blogPosts: BlogPost[] = [
+  // Add your blog posts here
+  // Example:
+  // {
+  //   id: "understanding-rag-systems",
+  //   title: "Understanding RAG Systems: A Deep Dive",
+  //   description: "An in-depth exploration of Retrieval-Augmented Generation systems and how they're revolutionizing LLM applications.",
+  //   date: "February 15, 2026",
+  //   readTime: "8 min read",
+  //   tags: ["LLM", "RAG", "AI"],
+  //   image: "/blog/rag-systems.jpg",
+  //   link: "https://yourblog.com/understanding-rag-systems",
+  // },
 ];

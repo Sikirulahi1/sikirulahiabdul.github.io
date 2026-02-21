@@ -36,21 +36,21 @@ export default function Contact() {
         </FadeUp>
 
         <FadeUp delay={0.2}>
-          <p className="text-lg text-text-secondary mb-16 max-w-2xl mx-auto">
+          <p className="text-lg text-text-secondary mb-20 max-w-2xl mx-auto">
             Open to AI/ML engineering roles and graduate research opportunities
             worldwide.
           </p>
         </FadeUp>
 
         {/* Contact Links */}
-        <div className="space-y-6 mb-16">
+        <div className="space-y-8 mb-20">
           {socialLinks.map((link, index) => (
             <FadeUp key={index} delay={0.3 + index * 0.1}>
               <a
                 href={link.url}
                 target={link.name !== "Email" ? "_blank" : undefined}
                 rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
-                className="group flex items-center justify-center gap-4 bg-card border border-border-subtle hover:border-accent rounded-lg p-6 transition-all hover:shadow-[0_0_30px_rgba(16,185,129,0.15)] hover:-translate-y-1"
+                className="group flex items-center justify-center gap-4 bg-card border border-border-subtle hover:border-accent rounded-lg p-8 transition-all hover:shadow-[0_0_30px_rgba(16,185,129,0.15)] hover:-translate-y-1"
               >
                 <span className="text-accent group-hover:scale-110 transition-transform">
                   {getIcon(link.icon)}

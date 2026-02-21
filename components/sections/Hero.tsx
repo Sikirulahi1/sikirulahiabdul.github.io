@@ -92,12 +92,17 @@ export default function Hero() {
           >
             View My Work
           </button>
-          <a
-            href="#contact"
+          <button
+            onClick={() => {
+              const contact = document.getElementById("contact");
+              if (contact) {
+                contact.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
             className="w-full sm:w-auto px-8 py-4 border border-accent text-accent font-jetbrains text-sm rounded-full hover:bg-accent hover:text-background transition-all hover:-translate-y-1"
           >
             Get In Touch
-          </a>
+          </button>
         </motion.div>
 
         {/* Social Links */}

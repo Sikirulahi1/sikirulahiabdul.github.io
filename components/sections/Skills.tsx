@@ -20,12 +20,12 @@ export default function Skills() {
           title="Skills & Expertise"
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skillGroup, index) => (
             <FadeUp key={index} delay={index * 0.1}>
-              <div className="bg-card border-l-2 border-accent border-border-subtle hover:border-accent rounded-lg p-6 transition-all hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] h-full">
+              <div className="bg-card border-l-2 border-accent border-border-subtle hover:border-accent rounded-lg p-8 transition-all hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] h-full">
                 {/* Header */}
-                <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center gap-3 mb-6">
                   <div className="text-accent">{getIcon(skillGroup.icon)}</div>
                   <h3 className="text-lg font-cormorant font-semibold text-text-primary">
                     {skillGroup.category}

@@ -4,6 +4,7 @@ import Skills from "@/components/sections/Skills";
 import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
 import Research from "@/components/sections/Research";
+import Blogs from "@/components/sections/Blogs";
 import Education from "@/components/sections/Education";
 import Community from "@/components/sections/Community";
 import Contact from "@/components/sections/Contact";
@@ -17,6 +18,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <Research />
+      <Blogs />
       <Education />
       <Community />
       <Contact />

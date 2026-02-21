@@ -22,14 +22,14 @@ export default function About() {
           title="About Me"
         />
 
-        <div className="grid md:grid-cols-5 gap-12 lg:gap-16">
+        <div className="grid md:grid-cols-5 gap-16 lg:gap-20">
           {/* Left Column - Narrative */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="md:col-span-3 space-y-6"
+            className="md:col-span-3 space-y-8"
           >
             <p className="text-text-secondary text-base lg:text-lg leading-relaxed">
               I started in Mechatronics Engineering at FUNAAB, where I fell in love
@@ -65,7 +65,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="md:col-span-2 grid grid-cols-2 gap-6"
+            className="md:col-span-2 grid grid-cols-2 gap-8"
           >
             {statData.map((stat, index) => (
               <motion.div
@@ -74,7 +74,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 + index * 0.1 }}
-                className="bg-card border border-border-subtle rounded-lg p-6 hover:border-accent transition-colors"
+                className="bg-card border border-border-subtle rounded-lg p-8 hover:border-accent transition-colors"
               >
                 <div className="text-4xl lg:text-5xl font-cormorant italic text-accent font-bold mb-2">
                   {stat.value.includes("+") || stat.value.includes("%") ? (

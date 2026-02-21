@@ -34,7 +34,7 @@ export default function Experience() {
           </div>
 
           {/* Experience Cards */}
-          <div className="space-y-12 ml-8 md:ml-20">
+          <div className="space-y-16 ml-8 md:ml-20">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -48,9 +48,9 @@ export default function Experience() {
                 <div className="absolute -left-10 md:-left-[54px] top-2 w-4 h-4 rounded-full bg-accent border-4 border-background" />
 
                 {/* Card */}
-                <div className="bg-card border border-border-subtle hover:border-accent rounded-lg p-6 transition-all hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] hover:-translate-y-1">
+                <div className="bg-card border border-border-subtle hover:border-accent rounded-lg p-8 transition-all hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] hover:-translate-y-1">
                   {/* Header */}
-                  <div className="mb-4">
+                  <div className="mb-6">
                     <h3 className="text-xl font-cormorant font-bold text-text-primary mb-1">
                       {exp.company}
                     </h3>
@@ -70,7 +70,7 @@ export default function Experience() {
                   </div>
 
                   {/* Bullets */}
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {exp.bullets.map((bullet, bulletIndex) => (
                       <li
                         key={bulletIndex}

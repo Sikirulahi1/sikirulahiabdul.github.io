@@ -14,13 +14,13 @@ export default function SectionHeading({
   centered = false,
 }: SectionHeadingProps) {
   return (
-    <div className={`mb-16 ${centered ? "text-center" : ""}`}>
+    <div className={`mb-20 ${centered ? "text-center" : ""}`}>
       {label && (
-        <p className="text-accent text-xs font-jetbrains uppercase tracking-widest mb-4">
+        <p className="text-accent text-xs font-jetbrains uppercase tracking-widest mb-6">
           {label}
         </p>
       )}
-      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-cormorant font-bold text-text-primary mb-4">
+      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-cormorant font-bold text-text-primary mb-6">
         {title}
       </h2>
       {subtitle && (

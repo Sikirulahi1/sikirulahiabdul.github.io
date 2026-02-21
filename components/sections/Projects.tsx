@@ -5,7 +5,8 @@ import SectionHeading from "../ui/SectionHeading";
 import Tag from "../ui/Tag";
 import { projects } from "@/lib/data";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, ExternalLink, FileText } from "lucide-react";
+import { Github, ExternalLink, FileText, ImageIcon } from "lucide-react";
+import Image from "next/image";
 
 const categories = ["All", "AI & LLM", "Computer Vision", "NLP", "Full Stack"];
 
@@ -26,7 +27,7 @@ export default function Projects() {
         />
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-16">
           {categories.map((category) => (
             <button
               key={category}
@@ -62,6 +63,22 @@ export default function Projects() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-card border border-border-subtle rounded-lg overflow-hidden hover:border-accent hover:shadow-[0_0_30px_rgba(16,185,129,0.15)] transition-all hover:-translate-y-1 flex flex-col"
               >
+                {/* Project Image/Thumbnail */}
+                {project.image ? (
+                  <div className="relative w-full h-48 bg-surface overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="relative w-full h-48 bg-surface flex items-center justify-center">
+                    <ImageIcon className="text-text-muted" size={48} />
+                  </div>
+                )}
+
                 {/* Category Badge */}
                 <div className="p-4 pb-0">
                   <Tag variant="accent">{project.category[0]}</Tag>

@@ -9,16 +9,16 @@ import { motion } from "framer-motion";
 
 export default function Research() {
   return (
-    <section id="research" className="section-container">
+    <section id="publications" className="section-container">
       <div className="max-w-5xl mx-auto">
         <SectionHeading
-          label="// research_publications"
-          title="Research & Publications"
+          label="// publications"
+          title="Publications"
           subtitle="Bridging academic rigor with practical AI engineering."
           centered
         />
 
-        <div className="space-y-8">
+        <div className="space-y-12">
           {publications.map((pub, index) => (
             <FadeUp key={index} delay={index * 0.2}>
               <div className="bg-card border border-border-subtle rounded-lg p-8 hover:border-accent transition-all">
