@@ -15,23 +15,23 @@ export default function Community() {
           subtitle="Contributing to the growth of AI/ML communities and collaborative learning."
         />
 
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
+        <div className="grid md:grid-cols-3 gap-10 mt-14">
           {community.map((item, index) => (
             <FadeUp key={index} delay={index * 0.1}>
               <div className="bg-card border border-border-subtle rounded-lg p-8 hover:border-accent hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] transition-all h-full flex flex-col">
-                <div className="flex items-start gap-3 mb-4">
-                  <Users className="text-accent flex-shrink-0 mt-1" size={24} />
+                <div className="flex items-start gap-3 mb-6">
+                  <Users className="text-accent flex-shrink-0 mt-1" size={20} />
                   <div>
-                    <h3 className="text-lg font-cormorant font-bold text-text-primary mb-1">
+                    <h3 className="text-base font-bold text-text-primary mb-1">
                       {item.organization}
                     </h3>
-                    <p className="text-accent text-sm font-jetbrains mb-2">
+                    <p className="text-accent text-sm mb-2" style={{ fontFamily: 'var(--font-fira-code), monospace' }}>
                       {item.role}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-2 text-xs text-text-muted font-jetbrains mb-4">
+                <div className="flex flex-col gap-2 text-xs text-text-muted mb-5" style={{ fontFamily: 'var(--font-fira-code), monospace' }}>
                   <span className="flex items-center gap-2">
                     <Calendar size={12} />
                     {item.startDate} – {item.endDate}
@@ -42,7 +42,7 @@ export default function Community() {
                   </span>
                 </div>
 
-                <p className="text-text-secondary text-sm flex-grow">
+                <p className="text-text-secondary text-xs flex-grow leading-relaxed">
                   {item.description}
                 </p>
               </div>

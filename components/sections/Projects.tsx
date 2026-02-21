@@ -27,16 +27,16 @@ export default function Projects() {
         />
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16 mt-16">
+        <div className="flex flex-wrap justify-center gap-5 mb-14 mt-12">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveFilter(category)}
-              className={`px-6 py-2 text-sm font-jetbrains rounded-full transition-all ${
-                activeFilter === category
-                  ? "bg-accent text-background"
-                  : "bg-card text-text-secondary border border-border-subtle hover:border-accent hover:text-accent"
-              }`}
+              className={`px-8 py-3.5 text-sm font-medium rounded-lg transition-all ${activeFilter === category
+                ? "bg-gradient-to-r from-accent to-accent-light text-background shadow-[0_0_20px_rgba(16,185,129,0.3)]"
+                : "bg-card text-text-secondary border border-border-subtle hover:border-accent hover:text-accent"
+                }`}
+              style={{ fontFamily: 'var(--font-fira-code), monospace' }}
             >
               {category}
             </button>
@@ -51,7 +51,7 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredProjects.map((project, index) => (
               <motion.div
@@ -80,23 +80,23 @@ export default function Projects() {
                 )}
 
                 {/* Category Badge */}
-                <div className="p-4 pb-0">
+                <div className="p-5 pb-0">
                   <Tag variant="accent">{project.category[0]}</Tag>
                 </div>
 
                 {/* Content */}
-                <div className="p-6 pt-4 flex-grow flex flex-col">
-                  <h3 className="text-xl font-cormorant font-bold text-text-primary mb-3">
+                <div className="p-5 pt-4 flex-grow flex flex-col">
+                  <h3 className="text-xl font-bold text-text-primary mb-3">
                     {project.title}
                   </h3>
 
-                  <p className="text-text-secondary text-sm mb-4 line-clamp-3 flex-grow">
+                  <p className="text-text-secondary text-sm mb-4 line-clamp-3 flex-grow leading-relaxed">
                     {project.description}
                   </p>
 
                   {/* Key Metric */}
-                  <div className="bg-surface border border-accent/30 rounded p-3 mb-4">
-                    <p className="text-accent text-xs font-jetbrains">
+                  <div className="bg-surface border border-accent/30 rounded-lg p-3 mb-4">
+                    <p className="text-accent text-xs" style={{ fontFamily: 'var(--font-fira-code), monospace' }}>
                       {project.keyMetric}
                     </p>
                   </div>

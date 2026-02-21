@@ -18,12 +18,12 @@ export default function Blogs() {
             subtitle="Technical deep-dives, tutorials, and insights on AI/ML engineering."
           />
 
-          <div className="text-center py-20 mt-16">
+          <div className="text-center py-16 mt-12">
             <p className="text-text-secondary text-lg mb-4">
               Blog posts coming soon!
             </p>
             <p className="text-text-muted text-sm">
-              Add your blog posts to <code className="bg-card px-2 py-1 rounded text-accent">lib/data.ts</code>
+              Add your blog posts to <code className="bg-card px-2 py-1 rounded text-accent" style={{ fontFamily: 'var(--font-fira-code), monospace' }}>lib/data.ts</code>
             </p>
           </div>
         </div>
@@ -40,7 +40,7 @@ export default function Blogs() {
           subtitle="Technical deep-dives, tutorials, and insights on AI/ML engineering."
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {blogPosts.map((post, index) => (
             <FadeUp key={post.id} delay={index * 0.1}>
               <a
@@ -68,7 +68,7 @@ export default function Blogs() {
                 {/* Content */}
                 <div className="p-6">
                   {/* Meta Info */}
-                  <div className="flex items-center gap-4 text-xs text-text-muted font-jetbrains mb-3">
+                  <div className="flex items-center gap-4 text-xs text-text-muted mb-3" style={{ fontFamily: 'var(--font-fira-code), monospace' }}>
                     <span className="flex items-center gap-1">
                       <Calendar size={12} />
                       {post.date}
@@ -80,12 +80,12 @@ export default function Blogs() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-cormorant font-bold text-text-primary mb-3 group-hover:text-accent transition-colors">
+                  <h3 className="text-xl font-bold text-text-primary mb-3 group-hover:text-accent transition-colors">
                     {post.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-text-secondary text-sm mb-4 line-clamp-3">
+                  <p className="text-text-secondary text-sm mb-4 line-clamp-3 leading-relaxed">
                     {post.description}
                   </p>
 
@@ -97,7 +97,7 @@ export default function Blogs() {
                   </div>
 
                   {/* Read More */}
-                  <div className="flex items-center gap-2 text-accent text-sm font-jetbrains group-hover:gap-3 transition-all">
+                  <div className="flex items-center gap-2 text-accent text-sm group-hover:gap-3 transition-all" style={{ fontFamily: 'var(--font-fira-code), monospace' }}>
                     Read More
                     <ExternalLink size={14} />
                   </div>

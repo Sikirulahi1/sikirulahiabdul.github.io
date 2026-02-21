@@ -64,18 +64,17 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-background/80 backdrop-blur-md border-b border-border-subtle"
-            : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? "bg-background/80 backdrop-blur-md border-b border-border-subtle"
+          : "bg-transparent"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <button
               onClick={scrollToTop}
-              className="text-xl font-cormorant font-semibold text-text-primary hover:text-accent transition-colors"
+              className="text-xl font-bold text-text-primary hover:text-accent transition-colors"
             >
               Sikirulahi
             </button>
@@ -86,11 +85,10 @@ export default function Navbar() {
                 <button
                   key={link.name}
                   onClick={() => handleNavClick(link.href)}
-                  className={`text-sm font-jetbrains transition-colors ${
-                    activeSection === link.href.substring(1)
-                      ? "text-accent"
-                      : "text-text-secondary hover:text-accent"
-                  }`}
+                  className={`text-sm font-medium transition-colors ${activeSection === link.href.substring(1)
+                    ? "text-accent"
+                    : "text-text-secondary hover:text-accent"
+                    }`}
                 >
                   {link.name}
                 </button>
@@ -101,7 +99,7 @@ export default function Navbar() {
                 <button
                   onMouseEnter={() => setShowCVDropdown(true)}
                   onMouseLeave={() => setShowCVDropdown(false)}
-                  className="flex items-center gap-2 px-4 py-2 border border-accent text-accent text-sm font-jetbrains rounded-full hover:bg-accent hover:text-background transition-all"
+                  className="flex items-center gap-2 px-6 py-2.5 border-2 border-accent text-accent text-sm font-semibold rounded-lg hover:bg-accent hover:text-background transition-all"
                 >
                   Download CV
                   <ChevronDown size={14} />
@@ -119,7 +117,7 @@ export default function Navbar() {
                       href="/resume-industry.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block px-4 py-3 text-sm text-text-primary hover:bg-surface hover:text-accent transition-colors"
+                      className="block px-5 py-3.5 text-sm text-text-primary hover:bg-surface hover:text-accent transition-colors"
                     >
                       Industry Resume
                     </a>
@@ -127,7 +125,7 @@ export default function Navbar() {
                       href="/resume-academic.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block px-4 py-3 text-sm text-text-primary hover:bg-surface hover:text-accent transition-colors border-t border-border-subtle"
+                      className="block px-5 py-3.5 text-sm text-text-primary hover:bg-surface hover:text-accent transition-colors border-t border-border-subtle"
                     >
                       Academic CV
                     </a>
@@ -162,11 +160,10 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-lg font-jetbrains transition-colors ${
-                  activeSection === link.href.substring(1)
-                    ? "text-accent"
-                    : "text-text-secondary hover:text-text-primary"
-                }`}
+                className={`text-lg font-medium transition-colors ${activeSection === link.href.substring(1)
+                  ? "text-accent"
+                  : "text-text-secondary hover:text-text-primary"
+                  }`}
               >
                 {link.name}
               </a>
@@ -177,7 +174,7 @@ export default function Navbar() {
                 href="/resume-industry.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-3 text-center border border-accent text-accent text-sm font-jetbrains rounded-full hover:bg-accent hover:text-background transition-all"
+                className="px-6 py-3.5 text-center border-2 border-accent text-accent text-sm font-semibold rounded-lg hover:bg-accent hover:text-background transition-all"
               >
                 Industry Resume
               </a>
@@ -185,7 +182,7 @@ export default function Navbar() {
                 href="/resume-academic.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-3 text-center border border-accent text-accent text-sm font-jetbrains rounded-full hover:bg-accent hover:text-background transition-all"
+                className="px-6 py-3.5 text-center border-2 border-accent text-accent text-sm font-semibold rounded-xl hover:bg-accent hover:text-background transition-all"
               >
                 Academic CV
               </a>

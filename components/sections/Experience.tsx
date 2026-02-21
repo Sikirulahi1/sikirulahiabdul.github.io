@@ -24,7 +24,7 @@ export default function Experience() {
           title="Experience"
         />
 
-        <div className="relative mt-16">
+        <div className="relative mt-12">
           {/* Timeline Line */}
           <div className="absolute left-0 md:left-8 top-0 bottom-0 w-0.5 bg-border-subtle">
             <motion.div
@@ -34,7 +34,7 @@ export default function Experience() {
           </div>
 
           {/* Experience Cards */}
-          <div className="space-y-20 ml-8 md:ml-20">
+          <div className="space-y-12 ml-8 md:ml-20">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -50,14 +50,14 @@ export default function Experience() {
                 {/* Card */}
                 <div className="bg-card border border-border-subtle hover:border-accent rounded-lg p-8 transition-all hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] hover:-translate-y-1">
                   {/* Header */}
-                  <div className="mb-6">
-                    <h3 className="text-xl font-cormorant font-bold text-text-primary mb-1">
+                  <div className="mb-5">
+                    <h3 className="text-xl font-bold text-text-primary mb-1">
                       {exp.company}
                     </h3>
-                    <p className="text-accent font-jetbrains text-sm mb-2">
+                    <p className="text-accent text-sm mb-3" style={{ fontFamily: 'var(--font-fira-code), monospace' }}>
                       {exp.role}
                     </p>
-                    <div className="flex flex-wrap gap-4 text-xs text-text-muted font-jetbrains">
+                    <div className="flex flex-wrap gap-4 text-xs text-text-muted" style={{ fontFamily: 'var(--font-fira-code), monospace' }}>
                       <span className="flex items-center gap-1">
                         <MapPin size={12} />
                         {exp.location}
@@ -74,9 +74,9 @@ export default function Experience() {
                     {exp.bullets.map((bullet, bulletIndex) => (
                       <li
                         key={bulletIndex}
-                        className="text-text-secondary text-sm flex gap-2"
+                        className="text-text-secondary text-sm flex gap-3 leading-relaxed"
                       >
-                        <span className="text-accent flex-shrink-0">›</span>
+                        <span className="text-accent flex-shrink-0 mt-1">›</span>
                         <span>{bullet}</span>
                       </li>
                     ))}

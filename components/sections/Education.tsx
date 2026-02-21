@@ -15,14 +15,14 @@ export default function Education() {
           title="Education & Awards"
         />
 
-        <div className="grid md:grid-cols-2 gap-12 mt-16">
+        <div className="grid md:grid-cols-2 gap-10 mt-12">
           {/* Education */}
           <FadeUp>
             <div className="bg-card border border-border-subtle rounded-lg p-8 h-full">
               <div className="flex items-center gap-3 mb-6">
                 <GraduationCap className="text-accent" size={32} />
                 <div>
-                  <h3 className="text-2xl font-cormorant font-bold text-text-primary">
+                  <h3 className="text-2xl font-bold text-text-primary">
                     {education.university}
                   </h3>
                 </div>
@@ -32,21 +32,21 @@ export default function Education() {
                 {education.degree}
               </p>
 
-              <p className="text-sm text-text-muted font-jetbrains mb-6">
+              <p className="text-sm text-text-muted mb-6" style={{ fontFamily: 'var(--font-fira-code), monospace' }}>
                 {education.period}
               </p>
 
-              <div className="bg-surface border border-accent/30 rounded-lg p-4 mb-6">
-                <div className="text-5xl font-cormorant italic text-accent font-bold mb-1">
+              <div className="bg-surface border border-accent/30 rounded-lg p-5 mb-6">
+                <div className="text-5xl italic text-accent font-bold mb-1">
                   {education.gpa}
                 </div>
-                <p className="text-xs font-jetbrains text-text-muted uppercase tracking-wider">
+                <p className="text-xs text-text-muted uppercase tracking-wider" style={{ fontFamily: 'var(--font-fira-code), monospace' }}>
                   GPA (First Class Honours)
                 </p>
               </div>
 
               <div>
-                <h4 className="text-sm font-jetbrains text-text-primary mb-3 uppercase tracking-wider">
+                <h4 className="text-sm text-text-primary mb-3 uppercase tracking-wider font-medium" style={{ fontFamily: 'var(--font-fira-code), monospace' }}>
                   Relevant Coursework
                 </h4>
                 <div className="flex flex-wrap gap-2">
@@ -59,20 +59,20 @@ export default function Education() {
           </FadeUp>
 
           {/* Awards */}
-          <div className="space-y-6">
+          <div className="space-y-5">
             {awards.map((award, index) => (
               <FadeUp key={index} delay={index * 0.1}>
                 <div className="bg-card border-l-2 border-accent rounded-lg p-6 hover:border-accent hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] transition-all">
                   <div className="flex items-start gap-4">
                     <span className="text-3xl">{award.icon}</span>
                     <div>
-                      <h3 className="text-lg font-cormorant font-bold text-text-primary mb-1">
+                      <h3 className="text-lg font-bold text-text-primary mb-1">
                         {award.title}
                       </h3>
                       <p className="text-sm text-text-secondary mb-1">
                         {award.subtitle}
                       </p>
-                      <p className="text-xs text-text-muted font-jetbrains">
+                      <p className="text-xs text-text-muted" style={{ fontFamily: 'var(--font-fira-code), monospace' }}>
                         {award.year}
                       </p>
                     </div>
